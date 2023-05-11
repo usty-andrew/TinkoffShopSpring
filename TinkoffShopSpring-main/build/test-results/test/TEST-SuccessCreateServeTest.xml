@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SuccessCreateServeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-11T18:17:12" hostname="DESKTOP-ERG9FC2" time="7.464">
+  <properties/>
+  <testcase name="createOrderTest()" classname="SuccessCreateServeTest" time="7.464"/>
+  <system-out><![CDATA[22:17:15.813 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+22:17:15.860 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
+22:17:15.923 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+22:17:15.927 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+22:17:15.929 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+22:17:15.932 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+22:17:15.933 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+22:17:15.933 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /byProductName?testServe= HTTP/1.1
+22:17:15.934 [Test worker] DEBUG org.apache.http.wire -  >> "GET /byProductName?testServe= HTTP/1.1[\r][\n]"
+22:17:15.938 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+22:17:15.938 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+22:17:15.938 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+22:17:15.939 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)[\r][\n]"
+22:17:15.939 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+22:17:15.939 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+22:17:15.939 [Test worker] DEBUG org.apache.http.headers - >> GET /byProductName?testServe= HTTP/1.1
+22:17:15.940 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+22:17:15.940 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+22:17:15.940 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+22:17:15.941 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)
+22:17:15.942 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+22:17:16.346 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 400 [\r][\n]"
+22:17:16.351 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+22:17:16.351 [Test worker] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+22:17:16.352 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 11 May 2023 18:17:16 GMT[\r][\n]"
+22:17:16.352 [Test worker] DEBUG org.apache.http.wire -  << "Connection: close[\r][\n]"
+22:17:16.352 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:16.354 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 400 
+22:17:16.354 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 400 
+22:17:16.354 [Test worker] DEBUG org.apache.http.headers - << Content-Type: application/json
+22:17:16.354 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+22:17:16.355 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 11 May 2023 18:17:16 GMT
+22:17:16.355 [Test worker] DEBUG org.apache.http.headers - << Connection: close
+22:17:16.460 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+22:17:16.460 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+22:17:16.843 [Test worker] DEBUG org.apache.http.wire -  << "68[\r][\n]"
+22:17:16.844 [Test worker] DEBUG org.apache.http.wire -  << "{"timestamp":"2023-05-11T18:17:16.176+00:00","status":400,"error":"Bad Request","path":"/byProductName"}"
+22:17:16.847 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:16.847 [Test worker] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+22:17:16.848 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:16.848 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@4996c99
+22:17:16.849 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:60886<->127.0.0.1:8080 shut down
+HTTP/1.1 400 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 11 May 2023 18:17:16 GMT
+Connection: close
+
+{
+    "timestamp": "2023-05-11T18:17:16.176+00:00",
+    "status": 400,
+    "error": "Bad Request",
+    "path": "/byProductName"
+}
+22:17:17.027 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+22:17:17.027 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
+22:17:17.031 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+22:17:17.031 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+22:17:17.032 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+22:17:17.032 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+22:17:17.032 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+22:17:17.033 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: PUT /createServe?name=testServe&price=100 HTTP/1.1
+22:17:17.033 [Test worker] DEBUG org.apache.http.wire -  >> "PUT /createServe?name=testServe&price=100 HTTP/1.1[\r][\n]"
+22:17:17.033 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+22:17:17.033 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 0[\r][\n]"
+22:17:17.033 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+22:17:17.033 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+22:17:17.033 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)[\r][\n]"
+22:17:17.034 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+22:17:17.034 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+22:17:17.034 [Test worker] DEBUG org.apache.http.headers - >> PUT /createServe?name=testServe&price=100 HTTP/1.1
+22:17:17.034 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+22:17:17.034 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 0
+22:17:17.034 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+22:17:17.034 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+22:17:17.034 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)
+22:17:17.034 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+22:17:17.501 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 [\r][\n]"
+22:17:17.501 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+22:17:17.501 [Test worker] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+22:17:17.501 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 11 May 2023 18:17:17 GMT[\r][\n]"
+22:17:17.501 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+22:17:17.501 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+22:17:17.501 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:17.502 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 
+22:17:17.502 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 
+22:17:17.502 [Test worker] DEBUG org.apache.http.headers - << Content-Type: application/json
+22:17:17.502 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+22:17:17.502 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 11 May 2023 18:17:17 GMT
+22:17:17.502 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+22:17:17.502 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
+22:17:17.504 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+22:17:17.505 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+22:17:17.505 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+22:17:17.506 [Test worker] DEBUG org.apache.http.wire -  << "4d[\r][\n]"
+22:17:17.506 [Test worker] DEBUG org.apache.http.wire -  << "{"id":7,"name":"testServe","price":100.0,"productType":"SERVE","remainder":1}"
+22:17:17.507 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:17.507 [Test worker] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+22:17:17.507 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:17.507 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3650d4fc
+22:17:17.507 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive for 60000 MILLISECONDS
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 11 May 2023 18:17:17 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "id": 7,
+    "name": "testServe",
+    "price": 100.0,
+    "productType": "SERVE",
+    "remainder": 1
+}
+22:17:19.314 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+22:17:19.314 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
+22:17:19.316 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+22:17:19.316 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+22:17:19.317 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+22:17:19.319 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+22:17:19.319 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+22:17:19.319 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /createOrder?userName=Vanya&userPhone=%2B7123456767&productName=testServe HTTP/1.1
+22:17:19.320 [Test worker] DEBUG org.apache.http.wire -  >> "POST /createOrder?userName=Vanya&userPhone=%2B7123456767&productName=testServe HTTP/1.1[\r][\n]"
+22:17:19.320 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+22:17:19.321 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+22:17:19.321 [Test worker] DEBUG org.apache.http.wire -  >> "Content-Length: 0[\r][\n]"
+22:17:19.321 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+22:17:19.321 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+22:17:19.321 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)[\r][\n]"
+22:17:19.321 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+22:17:19.321 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+22:17:19.321 [Test worker] DEBUG org.apache.http.headers - >> POST /createOrder?userName=Vanya&userPhone=%2B7123456767&productName=testServe HTTP/1.1
+22:17:19.321 [Test worker] DEBUG org.apache.http.headers - >> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+22:17:19.321 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+22:17:19.322 [Test worker] DEBUG org.apache.http.headers - >> Content-Length: 0
+22:17:19.322 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+22:17:19.322 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+22:17:19.322 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)
+22:17:19.322 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+22:17:19.401 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 [\r][\n]"
+22:17:19.401 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+22:17:19.401 [Test worker] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+22:17:19.401 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 11 May 2023 18:17:19 GMT[\r][\n]"
+22:17:19.401 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+22:17:19.401 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+22:17:19.401 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:19.401 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 
+22:17:19.401 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 
+22:17:19.401 [Test worker] DEBUG org.apache.http.headers - << Content-Type: application/json
+22:17:19.401 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+22:17:19.401 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 11 May 2023 18:17:19 GMT
+22:17:19.401 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+22:17:19.402 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
+22:17:19.402 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+22:17:19.403 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+22:17:19.403 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+22:17:19.407 [Test worker] DEBUG org.apache.http.wire -  << "23[\r][\n]"
+22:17:19.408 [Test worker] DEBUG org.apache.http.wire -  << "{"id":9,"authorId":8,"productId":7}"
+22:17:19.408 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:19.408 [Test worker] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+22:17:19.408 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:19.408 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3513c84c
+22:17:19.410 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive for 60000 MILLISECONDS
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 11 May 2023 18:17:19 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "id": 9,
+    "authorId": 8,
+    "productId": 7
+}
+22:17:19.529 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+22:17:19.530 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
+22:17:19.536 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+22:17:19.537 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+22:17:19.538 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+22:17:19.541 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+22:17:19.543 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+22:17:19.550 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /byPhone?phone=%2B7123456767 HTTP/1.1
+22:17:19.550 [Test worker] DEBUG org.apache.http.wire -  >> "GET /byPhone?phone=%2B7123456767 HTTP/1.1[\r][\n]"
+22:17:19.551 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+22:17:19.552 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+22:17:19.553 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+22:17:19.553 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)[\r][\n]"
+22:17:19.554 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+22:17:19.555 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+22:17:19.556 [Test worker] DEBUG org.apache.http.headers - >> GET /byPhone?phone=%2B7123456767 HTTP/1.1
+22:17:19.558 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+22:17:19.558 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+22:17:19.559 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+22:17:19.566 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)
+22:17:19.566 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+22:17:19.575 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 [\r][\n]"
+22:17:19.575 [Test worker] DEBUG org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+22:17:19.575 [Test worker] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+22:17:19.575 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 11 May 2023 18:17:19 GMT[\r][\n]"
+22:17:19.576 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+22:17:19.576 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+22:17:19.576 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:19.576 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 
+22:17:19.576 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 
+22:17:19.576 [Test worker] DEBUG org.apache.http.headers - << Content-Type: application/json
+22:17:19.576 [Test worker] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+22:17:19.576 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 11 May 2023 18:17:19 GMT
+22:17:19.576 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+22:17:19.576 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
+22:17:19.577 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+22:17:19.577 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+22:17:19.577 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+22:17:19.579 [Test worker] DEBUG org.apache.http.wire -  << "2d[\r][\n]"
+22:17:19.579 [Test worker] DEBUG org.apache.http.wire -  << "{"id":8,"name":"Vanya","phone":"+7123456767"}"
+22:17:19.580 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:19.580 [Test worker] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+22:17:19.580 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:19.580 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3a36cd5
+22:17:19.580 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive for 60000 MILLISECONDS
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 11 May 2023 18:17:19 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "id": 8,
+    "name": "Vanya",
+    "phone": "+7123456767"
+}
+22:17:20.143 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+22:17:20.144 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
+22:17:20.146 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+22:17:20.146 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+22:17:20.146 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+22:17:20.146 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+22:17:20.146 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+22:17:20.146 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: DELETE /deleteOrderById?id=9 HTTP/1.1
+22:17:20.146 [Test worker] DEBUG org.apache.http.wire -  >> "DELETE /deleteOrderById?id=9 HTTP/1.1[\r][\n]"
+22:17:20.147 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+22:17:20.147 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+22:17:20.147 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+22:17:20.147 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)[\r][\n]"
+22:17:20.147 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+22:17:20.147 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+22:17:20.147 [Test worker] DEBUG org.apache.http.headers - >> DELETE /deleteOrderById?id=9 HTTP/1.1
+22:17:20.147 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+22:17:20.147 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+22:17:20.147 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+22:17:20.147 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)
+22:17:20.147 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+22:17:20.198 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 [\r][\n]"
+22:17:20.199 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 0[\r][\n]"
+22:17:20.199 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 11 May 2023 18:17:19 GMT[\r][\n]"
+22:17:20.199 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+22:17:20.199 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+22:17:20.199 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:20.199 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 
+22:17:20.199 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 
+22:17:20.199 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 0
+22:17:20.199 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 11 May 2023 18:17:19 GMT
+22:17:20.199 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+22:17:20.199 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
+22:17:20.199 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+HTTP/1.1 200 
+Content-Length: 0
+Date: Thu, 11 May 2023 18:17:19 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+22:17:20.215 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+22:17:20.216 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
+22:17:20.217 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+22:17:20.217 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+22:17:20.217 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+22:17:20.217 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+22:17:20.217 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+22:17:20.217 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: DELETE /deleteProductById?id=7 HTTP/1.1
+22:17:20.217 [Test worker] DEBUG org.apache.http.wire -  >> "DELETE /deleteProductById?id=7 HTTP/1.1[\r][\n]"
+22:17:20.217 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+22:17:20.217 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+22:17:20.217 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+22:17:20.217 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)[\r][\n]"
+22:17:20.217 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+22:17:20.217 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+22:17:20.217 [Test worker] DEBUG org.apache.http.headers - >> DELETE /deleteProductById?id=7 HTTP/1.1
+22:17:20.218 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+22:17:20.218 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+22:17:20.218 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+22:17:20.218 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)
+22:17:20.218 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+22:17:20.226 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 [\r][\n]"
+22:17:20.227 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 0[\r][\n]"
+22:17:20.227 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 11 May 2023 18:17:19 GMT[\r][\n]"
+22:17:20.227 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+22:17:20.227 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+22:17:20.227 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:20.227 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 
+22:17:20.227 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 
+22:17:20.227 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 0
+22:17:20.227 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 11 May 2023 18:17:19 GMT
+22:17:20.227 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+22:17:20.227 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
+22:17:20.227 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+HTTP/1.1 200 
+Content-Length: 0
+Date: Thu, 11 May 2023 18:17:19 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+22:17:20.241 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://localhost:8080
+22:17:20.241 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8080
+22:17:20.242 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+22:17:20.242 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+22:17:20.242 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+22:17:20.242 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+22:17:20.243 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+22:17:20.243 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: DELETE /deleteUserById?id=8 HTTP/1.1
+22:17:20.243 [Test worker] DEBUG org.apache.http.wire -  >> "DELETE /deleteUserById?id=8 HTTP/1.1[\r][\n]"
+22:17:20.243 [Test worker] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+22:17:20.243 [Test worker] DEBUG org.apache.http.wire -  >> "Host: localhost:8080[\r][\n]"
+22:17:20.243 [Test worker] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+22:17:20.243 [Test worker] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)[\r][\n]"
+22:17:20.243 [Test worker] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+22:17:20.243 [Test worker] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+22:17:20.243 [Test worker] DEBUG org.apache.http.headers - >> DELETE /deleteUserById?id=8 HTTP/1.1
+22:17:20.243 [Test worker] DEBUG org.apache.http.headers - >> Accept: */*
+22:17:20.243 [Test worker] DEBUG org.apache.http.headers - >> Host: localhost:8080
+22:17:20.243 [Test worker] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+22:17:20.243 [Test worker] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.7)
+22:17:20.243 [Test worker] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+22:17:20.265 [Test worker] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 [\r][\n]"
+22:17:20.265 [Test worker] DEBUG org.apache.http.wire -  << "Content-Length: 0[\r][\n]"
+22:17:20.266 [Test worker] DEBUG org.apache.http.wire -  << "Date: Thu, 11 May 2023 18:17:19 GMT[\r][\n]"
+22:17:20.266 [Test worker] DEBUG org.apache.http.wire -  << "Keep-Alive: timeout=60[\r][\n]"
+22:17:20.266 [Test worker] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+22:17:20.266 [Test worker] DEBUG org.apache.http.wire -  << "[\r][\n]"
+22:17:20.266 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 
+22:17:20.266 [Test worker] DEBUG org.apache.http.headers - << HTTP/1.1 200 
+22:17:20.267 [Test worker] DEBUG org.apache.http.headers - << Content-Length: 0
+22:17:20.267 [Test worker] DEBUG org.apache.http.headers - << Date: Thu, 11 May 2023 18:17:19 GMT
+22:17:20.267 [Test worker] DEBUG org.apache.http.headers - << Keep-Alive: timeout=60
+22:17:20.267 [Test worker] DEBUG org.apache.http.headers - << Connection: keep-alive
+22:17:20.267 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive for 60000 MILLISECONDS
+HTTP/1.1 200 
+Content-Length: 0
+Date: Thu, 11 May 2023 18:17:19 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
